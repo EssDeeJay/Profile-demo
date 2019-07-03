@@ -36,36 +36,55 @@ body{
 .user-box h3{
     color:#fff;
 }
-.scroll-btn{
-    bottom: 30px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 2px solid white;
-    padding: 10px 10px 20px;
-    border-radius: 30px;
-    opacity: 0;
-    animation: 1s slidein 0.5s forwards;
+.demo{
+    position:relative;
+    top: 190px;
+}
+
+ /* --------- Button CSS -------------------  */
+ .scroll-btn{
+     text-decoration: none !important;
+ }
+.scroll-btn .btn{
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  background-color: #fcad26;
+  font-size: 25px;
+  font-weight: 300px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px 20px;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: 0 6px #efa424;
+  opacity: 0;
+  animation: 1s slidein 0.5s forwards;
 }
 @keyframes slidein{
     100%{
         opacity: 1;
+        transform: translateY(-25px);
     }
 }
-.scroll-bar span{
-    border: 2px solid white;
-    font-size: 10px;
-    border-radius: 30px;
+.scroll-btn .btn:hover{
+    box-shadow: 0 4px #efa424;
+    top: 2px;
+    text-decoration: none;
+    outline: none;
 }
-.scroll-bar{
-    animation: mover 1s infinite alternate;
+
+.scroll-btn .btn:active{
+    box-shadow: none;
+    top: 4px;
 }
-@keyframes mover{
-    0%{
-        transform: translateY(0);
-    }
-    100%{
-        transform: translateY(10px);
+
+@media (max-width:768px){
+    .scroll-btn .btn{
+        transform: translateY(-50px);
     }
 }
 
