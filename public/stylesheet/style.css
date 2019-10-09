@@ -1,7 +1,6 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
 }
 
 #header{
@@ -30,15 +29,29 @@ body{
 }
 .user-box h1{
     color: #fff;
-    font-weight: bold;
+    font-family: 'Libre Baskerville',serif;
+    font-weight: 700;
+    font-size: 28px;
     margin: 10px;
 }
 .user-box h3{
     color:#fff;
+    font-family: 'Muli',sans-serif;
+    font-size: 20px;
+    font-weight: 800;
 }
 .demo{
     position:relative;
     top: 190px;
+}
+
+@media(max-width: 768px){
+    .user-box .h1{
+        font-size: 24px;
+    }
+    .user-box .h3{
+        font-size: 18px;
+    }
 }
 
  /* --------- Button CSS -------------------  */
@@ -52,11 +65,11 @@ body{
   display: block;
   position: relative;
   background-color: #fcad26;
+  font-family: 'Muli',sans-serif;
   font-size: 25px;
   font-weight: 300px;
   color: white;
   text-transform: uppercase;
-  letter-spacing: 2px;
   padding: 10px 20px;
   margin: 0 auto;
   border-radius: 50%;
@@ -67,7 +80,7 @@ body{
 @keyframes slidein{
     100%{
         opacity: 1;
-        transform: translateY(-25px);
+        transform: translateY(-35px);
     }
 }
 .scroll-btn .btn:hover{
@@ -81,13 +94,6 @@ body{
     box-shadow: none;
     top: 4px;
 }
-
-@media (max-width:768px){
-    .scroll-btn .btn{
-        transform: translateY(-50px);
-    }
-}
-
 
 .about{
     padding-top: 100px;
@@ -107,6 +113,11 @@ body{
 .navbar-brand{
     height: 50px;
     color: #fff;
+    font-family: 'Libre Baskerville',serif;
+    font-weight: 700;
+}
+.navbar-brand:hover{
+    color: #fcad26;
 }
 .nav-bar .fa-bars{
     font-size: 35px;
@@ -121,24 +132,181 @@ body{
 }
 .nav-link{
     color: white;
+    font-family: 'Libre Baskerville',serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+.nav-link:hover{
+    color: #f06666;
 }
 @media (max-width: 800px){
+    .about{
+        grid-column-start: span 12;
+    }
     .row .col-md-6{
         margin-top: 20px;
     }
 }
-.skills-bar p {
-    margin-bottom: 6px;
+.about h3{
+    font-family: 'Muli',sans-serif;
+    font-weight: 800;
+}
+.about p{
+    font-family: 'Muli',sans-serif;
+    font-weight: 400;
+}
+
+/*  skills bar design    */
+.title-skills{
+    font-family: 'Muli',sans-serif;
+    font-weight: 800;
+    font-size: 2em;
+    margin-top: 4em;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    transition: all 400ms ease-in-out;
+    margin: 4rem auto;
+    text-align: center;
+  }
+  
+  .bar{
+    width: 80%;
+    margin: 2em auto;
+  }
+  .skill{
+    font-family: 'Muli',sans-serif;
     font-weight: 600;
-}
-.progress{
-    border-radius: 16px !important;
-    margin-bottom: 10px;
-}
-.progress-bar{
-    border-radius: 16px;
-    background: #000 !important;
-}
+    font-size: 0.8em;
+    text-transform: uppercase;
+    margin-bottom: 0.25em;
+  }
+  .speech-bubble{
+    font-size: 0.75em;
+    line-height: 2em;
+    color: white;
+    position: absolute;
+    top: -2.7em;
+    text-align: center;
+    min-width: 3em;
+    border-radius: 0.3em;
+    display: none;
+  }
+  
+  .html{
+    left: calc(95% - 1.5em);
+  }
+  
+  .design{
+    left: calc(75% - 1.5em);
+  }
+  .frameworks{
+    left: calc(80% - 1.5em);
+  }
+  .sql{
+    left: calc(70% - 1.5em);
+  }
+  .mongodb{
+    left: calc(85% - 1.5em);
+  }
+  .sharp{
+    left: calc(70% - 1.5em);
+  }
+  .git{
+    left: calc(90% - 1.5em);
+  }
+  .json{
+    left: calc(80% - 1.5em);
+  }
+  .wordpress{
+    left: calc(70% - 1.5em);
+  }
+  
+  .speech-bubble:after{
+    border: 0.5em solid transparent;
+    content: "";
+    margin-left: -0.5em;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+  }
+  .bar-outer{
+    height: 1.25em;
+    background: #eeeeee;
+    position: relative;
+    border-radius: 0.3em;
+  }
+  .bar-inner{
+    width: 0;
+    height: 1.25em;
+    border-radius: 0.3em;
+  }
+  .ht, .html{
+    background: #000;
+  }
+  
+  .html:after{
+    border-top-color: #000;
+  }
+  
+  .ui, .design{
+    background: #000;
+  }
+  
+  .design:after{
+    border-top-color: #000;
+  }
+  .fw, .frameworks{
+    background: #000;
+  }
+  
+  .frameworks:after{
+    border-top-color: #000;
+  }
+  .sl, .sql{
+    background: #000;
+  }
+  
+  .sql:after{
+    border-top-color: #000;
+  }
+  .mr, .mongodb{
+    background: #000;
+  }
+  
+  .mongodb:after{
+    border-top-color: #000;
+  }
+  .cs, .sharp{
+    background: #000;
+  }
+  
+  .sharp:after{
+    border-top-color: #000;
+  }
+  .gt, .git{
+    background: #000;
+  }
+  
+  .git:after{
+    border-top-color: #000;
+  }
+  .jx, .json{
+    background: #000;
+  }
+  
+  .json:after{
+    border-top-color: #000;
+  }
+  .wp, .wordpress{
+    background: #000;
+  }
+  
+  .wordpress:after{
+    border-top-color: #000;
+  }
+
+
+/*   experience design          */
 .resume{
     margin-top: -50px;
     padding-top: 50px;
@@ -146,6 +314,8 @@ body{
     background-color: #f9f9f9;
 }
 .resume h3{
+    font-family: 'Muli',sans-serif;
+    font-weight: 800;
     margin-bottom: 50px;
 }
 .timeline{
@@ -167,13 +337,16 @@ body{
     margin-bottom: 20px;
     margin-left: 20px;
     background: #fff;
+    font-family: 'Muli',sans-serif;
 }
 .timeline li h4{
     background-color: #000;
     padding: 5px 0 5px 20px;
     color: #fff;
     font-size: 15px;
+    font-weight: 700;
 }
+
 .timeline li:before{
     content: "";
     background: #fff;
@@ -186,13 +359,21 @@ body{
     height: 20px;
     z-index: 1;
 }
+.timeline li p{
+    font-weight: 400;
+}
 
 .projects{
     padding-top: 50px;
     padding-bottom: 50px;
+    font-family: 'Muli',sans-serif;
 }
 .projects h1{
+    font-weight: 800;
     margin-bottom: 15px;
+}
+.projects p{
+    font-weight: 400;
 }
 
 .projects-box{
@@ -209,9 +390,10 @@ body{
 .projects-box span{
     margin: 3px;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 800;
 }
 .projects-box p{
+    font-weight: 400;
     font-size: 15px;
     margin-top: 20px;
     color: #777;
@@ -237,6 +419,13 @@ body{
     background-size: cover;
     background-attachment: fixed;
     color: #fff;
+    font-family: 'Muli',sans-serif;
+}
+.contact h1{
+    font-weight: 800;
+}
+.contact p{
+    font-weight: 400;
 }
 .contact .row{
     padding: 30px 0;
@@ -274,6 +463,10 @@ body{
     margin-top: 50px;
     color: #fff;
     padding-top: 10px;
+    font-family: 'Muli',sans-serif;
+}
+.footer p{
+    font-weight: 600;
 }
 .fa-heart{
     color: red;
